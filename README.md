@@ -1,4 +1,6 @@
 ## Details
+[R-Ladies Abuja Workshop.](https://www.meetup.com/rladies-abuja/events/300249256/)
+
 This workshop delves into the world of R programming from the command line interface. It empowers participants to leverage the direct interaction and control offered by the command line, enhancing their R workflow.
 
 The focus will be on:
