@@ -1,13 +1,11 @@
-#!/usr/bin/env bash
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
 
 # author Bilikisu Olatunji
 # Bash Script to download data from Maven Analytics website
 
-args <- commandArgs(trailingOnly = TRUE)
+#cat(args, sep = "\n")
 
-# Always use double quote to get the value instead of the variable name
-echo args[1]
+wget args[1]
 
-# wget args[1]
-# 
-# unzip -n -d args[2] CRM+Sales+Opportunities.zip
+unzip -n -d args[2] CRM+Sales+Opportunities.zip
