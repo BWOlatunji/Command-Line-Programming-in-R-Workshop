@@ -1,0 +1,438 @@
+---
+title: Command Line Programming in R
+subtitle: Exploring working automation at the Command Line
+format:
+  clean-revealjs:
+    self-contained: true
+author:
+  - name: Bilikisu Olatunji
+    orcid: 0009-0005-9144-6423
+    email: bilqiiswunmi@gmail.com
+    affiliations: Business-datalab.com
+date: last-modified
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## About Me
+
+::: columns
+::: {.column width="50%"}
+### Bilikisu Wunmi Olatunji
+
+-   **MSc, Information technology (University of Liverpool)**
+
+-   **Data Scientist, Founder of Business Data Laboratory**.
+
+-   **Founder and co-organizer of Abuja R Users Group and R-Ladies
+    Abuja**.
+
+-   **Certified RStudio Instructor in tidyverse and shiny development**
+
+-   **Certified Agile coach and trainer, Product Owner, and Scrum
+    Master**.
+:::
+
+::: {.column width="50%"}
+![](images/qbwoa.jpeg)
+:::
+:::
+
+Note that sub- and multi-panel figures are also natively supported by
+Quarto. See
+[here](https://quarto.org/docs/authoring/figures.html#subfigures).
+
+# Setting up your working environment {background-color="#B38CB4"}
+
+## Quick Checklist
+
+-   Is git bash and docker on your computer system?
+
+``` bash
+git --version
+docker --version
+```
+
+# Let's get in! {background-color="#B38CB4"}
+
+## What is a command-line interface?
+
+A command-line interface (CLI) is a text-based user interface (UI) used
+to run programs, manage computer files and interact with the computer.
+
+## Why CLI?
+
+1.  Greater control of an OS, application and files
+2.  Ability to store scripts to automate regular tasks
+3.  Organizing your project
+4.  Getting and Posting data
+
+Want to know more reasons to learn CLI, [Top ten reasons to learn to use
+the command line: Expanding your reproducibility
+tools](https://www.youtube.com/watch?v=BNG0kdK76WU)
+
+## Terminal vs Shell
+
+The window shown in the two screenshots is called the terminal. This is
+the program that enables you to interact with the shell. It is the shell
+that executes the commands that is type at it's prompt.
+
+Common shells include: - Bash (Bourne Again Shell, Linux), - Zsh
+(Linux/macOS), and - PowerShell (Windows).
+
+## Command Line {#sec-crossref}
+
+### Launch Terminal
+
+#### Windows Command Line interface
+
+![](images/launch%20cmd-01.png){fig-alt="Windows CMD"}
+
+## Command Line
+
+### Launch Terminal
+
+#### RStudio Terminal
+
+![](images/terminal_rstudio.png){fig-alt="RStudio Terminal"}
+
+## Command Line
+
+### How to get help from the command line
+
+``` bash
+help pwd
+
+pwd --help
+```
+
+**Note:** Some commands like `man`, `whatis` does not work on windows
+terminal
+
+## Command Line
+
+### How to navigate the Bash terminal
+
+| **Command** | **Description**                    |
+|:------------|:-----------------------------------|
+| `pwd`       | Print working directory            |
+| `cd .`      | Navigate into directory            |
+| `cd ..`     | Go up one level                    |
+| `cd -`      | Go to previous working directory   |
+| `cd ~`      | Change directory to home directory |
+| `cd /`      | Change directory to root directory |
+
+1.  Present working directory
+
+``` bash
+pwd
+```
+
+2.  Moving around the terminal
+
+``` bash
+cd ~
+```
+
+# Working with Directories and Files {background-color="#B38CB4"}
+
+## Directories and Files
+
+### Basic Commands
+
+::: columns
+::: {.column width="55%"}
+| **Command** | **Description**         |
+|:------------|:------------------------|
+| `ls`        | List directory contents |
+| `mkdir`     | Create directory        |
+| `rm`        | Remove/delete file      |
+| `rmdir`     | Remove/delete directory |
+| `touch`     | Create file             |
+| `cp`        | Copy                    |
+:::
+
+::: {.column width="45%"}
+### List contents
+
+``` bash
+ls [-l,-a,-la,-lh, -lth]
+
+ls 
+
+ls -l
+
+ls -a
+
+ls -lth
+```
+:::
+:::
+
+## Directories and Files
+
+### List contents - using search criteria i.e. regex
+
+``` bash
+
+ls [si]*
+
+ls *.qmd
+
+ls *.??
+
+ls *.???
+
+ls [[:upper:]]
+
+ls[[:lower:]]
+```
+
+## Directories and Files
+
+### Create directory
+
+``` bash
+mkdir dir1
+
+mkdir dir2 dir3
+
+mkdir dir2/dir2_1
+```
+
+## Directories and Files
+
+### Create directory
+
+Adding new directory to a **non-existing** directory
+
+``` bash
+mkdir dir5/dir5_1
+
+mkdir -p dir5/dir5_1
+```
+
+## Directories and Files
+
+### Remove directory
+
+``` bash
+
+rmdir dir1
+
+rmdir dir2/dir2_1
+```
+
+## Directories and Files
+
+### Create file
+
+``` bash
+touch newfile.R
+
+touch ex/newfile2.R
+```
+
+## Directories and Files
+
+### Remove file
+
+``` bash
+rm old.txt
+
+rm *
+
+# remove all files without restriction
+rm -r dir1/
+```
+
+## Directories and Files
+
+### View file in IDE(RStudio, VSCode), CLI
+
+``` bash
+open test.R
+code test.R
+```
+
+## Directories and Files
+
+### Find directories and files
+
+``` bash
+find . -name "README.md"
+
+# Ignore case-sensitivity
+find . -iname "README.md"
+
+# all files that ends with .md
+find . -name "*.md"
+
+find -type d
+
+find -type f
+```
+
+## Directories and Files
+
+### Copy Directory/files
+
+``` bash
+
+cp -r dir2 dir1
+
+cp oldtext.txt oldtext_2.txt
+```
+
+## Directories and Files
+
+### Move/Rename Files
+
+::: columns
+::: {.column width="55%"}
+| **Command** | **Description**                                         |
+|:------------|:--------------------------------------------------------|
+| `mv`        | Move or rename files/directories                        |
+| `mv -f`     | Do not prompt for confirmation before overwriting files |
+| `mv -i`     | Prompt for confirmation before overwriting files        |
+| `mv -n`     | Do not overwrite existing files                         |
+| `mv -v`     | Move files in verbose mode                              |
+:::
+
+::: {.column width="45%"}
+``` bash
+# no file extension
+mv script1.txt script2
+
+# file extension
+mv script2 script2.txt
+
+# file extension
+mv script2.txt dir1/script3.R
+```
+:::
+:::
+
+## Directories and Files
+
+### View directories and files
+
+::: columns
+::: {.column width="55%"}
+| **Command** | **Description**                                         |
+|:------------|:--------------------------------------------------------|
+| `mv`        | Move or rename files/directories                        |
+| `mv -f`     | Do not prompt for confirmation before overwriting files |
+| `mv -i`     | Prompt for confirmation before overwriting files        |
+| `mv -n`     | Do not overwrite existing files                         |
+| `mv -v`     | Move files in verbose mode                              |
+:::
+
+::: {.column width="45%"}
+``` bash
+cat ./Practice/lorem_ipsum/sample1.txt 
+
+cat ./Practice/lorem_ipsum/sample1.txt ./Practice/lorem_ipsum/sample2.txt 
+```
+:::
+:::
+
+# Modifying File permissions {background-color="#B38CB4"}
+
+## Change Files Permission
+
+| **Operators** |               **Definition**                |
+|:-------------:|:-------------------------------------------:|
+|   **\`+\`**   |               Add permissions               |
+|   **\`-\`**   |             Remove permissions              |
+|   **\`=\`**   | Set the permissions to the specified values |
+
+
+## Change Files Permission
+
+### File Permissions
+
+| **Letters** |   **Definition**   |
+|:-----------:|:------------------:|
+|  **\`r\`**  |  Read permission   |
+|  **\`w\`**  |  Write permission  |
+|  **\`x\`**  | Execute permission |
+
+
+## Change Files Permission
+
+### File Ownership
+
+| **Reference** |         **Class**         |
+|:-------------:|:-------------------------:|
+|     **u**     |           Owner           |
+|     **g**     |           Group           |
+|     **o**     |          Others           |
+|     **a**     | All (owner,groups,others) |
+
+
+
+## Change Files Permission
+
+Assign Read, write and execute permissions to the file owner:
+
+``` bash
+chmod u+rwx [file_name]
+
+```
+
+Remove write permission from user:
+
+``` bash
+chmod -w [file_name]
+```
+
+Read and write for Owner, and Read-only for the group and other:
+
+``` bash
+chmod u+rw,go+r [file_name]
+```
+
+Remove write permission for the group and others:
+
+``` bash
+chmod go-w [file_name]
+```
+
+# Bash Scripting {background-color="#B38CB4"}
+
+## Start with the Shebang!
+
+``` bash
+#!/usr/bin/env bash
+```
+
+## Declare environment variables
+
+``` bash
+myVar=$1
+var2=$2
+```
+
+
+# Reference {background-color="#B38CB4"}
+
+## References
+
+[Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/)
+written by [Jeroen Janssens](https://jeroenjanssens.com/)
+
+[Command Line Basics for R
+Users](https://bash-intro.rsquaredacademy.com/)
+
+[Working at the Command
+Line](https://www.youtube.com/watch?v=NSy-WByR8Qo&list=PLmNrK_nkqBpKhP0Jb2XGPoRRfToHF1w-y)
+taught by [Pat Schloss](https://riffomonas.org/about/)
+
+[Bash for
+Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHh9ZhrnEbZKhzk0cetzuX7l)
+taught by [Gwyneth Pena-Siguenza](https://twitter.com/madebygps) and
+[Josh Duffney](https://twitter.com/joshduffney)
+
+[Appsilon, R Shiny Docker: How To Run Shiny Apps in a Docker Container](https://www.appsilon.com/post/r-shiny-docker-getting-started)

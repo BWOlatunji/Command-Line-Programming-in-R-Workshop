@@ -1,4 +1,5 @@
-## Details
+# Command Line Programming in R
+## Workshop Details
 [R-Ladies Abuja Workshop.](https://www.meetup.com/rladies-abuja/events/300249256/)
 
 This workshop delves into the world of R programming from the command line interface. It empowers participants to leverage the direct interaction and control offered by the command line, enhancing their R workflow.
@@ -15,5 +16,22 @@ By the end of the workshop, attendees will be equipped to:
 - Execute core R operations for data management and analysis.
 - Construct effective R scripts for automation and efficiency.
 - Gain a deeper understanding of the R environment.
+
+## Workshop Outline:
+1. Terminal vs Shell
+2. Setting up your working environment
+3. How to get help from the command line
+4. How to navigate the Bash terminal
+5. Working with directories and files
+  - List content
+  - Find directories and files
+  - View directories and files
+6. Redirection and Pipelines
+7. Modifying File permissions
+8. What is a Bash script?
+9. Declare environment variables
+10. Variables in Bash Script
+
+
 
 This workshop is ideal for those seeking to elevate their R proficiency and unlock the power of command-line programming for data science tasks.
