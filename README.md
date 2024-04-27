@@ -26,11 +26,10 @@ By the end of the workshop, attendees will be equipped to:
   - List content
   - Find directories and files
   - View directories and files
-6. Redirection and Pipelines
-7. Modifying File permissions
-8. What is a Bash script?
-9. Declare environment variables
-10. Variables in Bash Script
+6. Modifying File permissions
+7. What is a Bash script?
+8. Declare environment variables
+9. R Arguments in Bash Script
 
 
 
