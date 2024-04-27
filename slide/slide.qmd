@@ -87,7 +87,7 @@ Common shells include: - Bash (Bourne Again Shell, Linux), - Zsh
 
 #### Windows Command Line interface
 
-![](images/launch%20cmd-01.png){fig-alt="Windows CMD"}
+![](images/launch cmd.png)
 
 ## Command Line
 
@@ -348,7 +348,6 @@ cat ./Practice/lorem_ipsum/sample1.txt ./Practice/lorem_ipsum/sample2.txt
 |   **\`-\`**   |             Remove permissions              |
 |   **\`=\`**   | Set the permissions to the specified values |
 
-
 ## Change Files Permission
 
 ### File Permissions
@@ -358,7 +357,6 @@ cat ./Practice/lorem_ipsum/sample1.txt ./Practice/lorem_ipsum/sample2.txt
 |  **\`r\`**  |  Read permission   |
 |  **\`w\`**  |  Write permission  |
 |  **\`x\`**  | Execute permission |
-
 
 ## Change Files Permission
 
@@ -371,15 +369,12 @@ cat ./Practice/lorem_ipsum/sample1.txt ./Practice/lorem_ipsum/sample2.txt
 |     **o**     |          Others           |
 |     **a**     | All (owner,groups,others) |
 
-
-
 ## Change Files Permission
 
 Assign Read, write and execute permissions to the file owner:
 
 ``` bash
 chmod u+rwx [file_name]
-
 ```
 
 Remove write permission from user:
@@ -415,6 +410,12 @@ myVar=$1
 var2=$2
 ```
 
+## R Arguments in Bash Script
+
+``` bash
+args <- commandArgs(trailingOnly = TRUE)
+```
+
 
 # Reference {background-color="#B38CB4"}
 
@@ -435,4 +436,5 @@ Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHh9ZhrnEbZKhzk0cetzu
 taught by [Gwyneth Pena-Siguenza](https://twitter.com/madebygps) and
 [Josh Duffney](https://twitter.com/joshduffney)
 
-[Appsilon, R Shiny Docker: How To Run Shiny Apps in a Docker Container](https://www.appsilon.com/post/r-shiny-docker-getting-started)
+[Appsilon, R Shiny Docker: How To Run Shiny Apps in a Docker
+Container](https://www.appsilon.com/post/r-shiny-docker-getting-started)
