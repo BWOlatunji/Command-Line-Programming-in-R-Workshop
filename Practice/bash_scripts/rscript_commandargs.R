@@ -3,7 +3,7 @@ library(ggplot2)
 library(ggpubr)
 library(palmerpenguins)
 
-create_plots_pdf <- function(output_filename, group_name){
+create_plots_pdf <- function(output_filename){
   
   # Histogram example: flipper length by species
   gg1 <- ggplot(data = penguins, aes(x = flipper_length_mm)) +

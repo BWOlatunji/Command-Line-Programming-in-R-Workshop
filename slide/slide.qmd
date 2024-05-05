@@ -154,7 +154,7 @@ cd ~
 ### List contents
 
 ``` bash
-ls [-l,-a,-la,-lh, -lth]
+ls [-l,-a,-la,-lh, -lth, -R, -F]
 
 ls 
 
@@ -163,6 +163,10 @@ ls -l
 ls -a
 
 ls -lth
+
+ls -F Practice
+
+ls -RF Practice
 ```
 :::
 :::
@@ -198,9 +202,6 @@ mkdir dir2 dir3
 mkdir dir2/dir2_1
 ```
 
-## Directories and Files
-
-### Create directory
 
 Adding new directory to a **non-existing** directory
 
@@ -212,23 +213,43 @@ mkdir -p dir5/dir5_1
 
 ## Directories and Files
 
-### Remove directory
-
-``` bash
-
-rmdir dir1
-
-rmdir dir2/dir2_1
-```
-
-## Directories and Files
-
 ### Create file
 
 ``` bash
 touch newfile.R
 
 touch ex/newfile2.R
+```
+
+## Directories and Files
+
+### Remove directory
+
+
+``` bash
+
+rmdir dir1
+
+rmdir dir2/dir2_1
+
+```
+
+**Remove Non-empty directory**
+
+``` bash
+rmdir ex
+
+rm ex
+
+rm -RF ex
+```
+
+**Remove Non-empty directory - Safer version**
+
+
+``` bash
+rm -R -i ex
+
 ```
 
 ## Directories and Files
