@@ -7,10 +7,14 @@
 # variable within our script
 url=$1
 data_file=$2
+file_to_unzip=$3
 
 # Always use double quote to get the value instead of the variable name
-echo "$url"
+# echo "$url"
 
-# wget "$url"
-# 
-# unzip -n -d "$data_file" CRM+Sales+Opportunities.zip
+wget "$url"
+
+unzip -n -d "$data_file" "$file_to_unzip"
+
+
+

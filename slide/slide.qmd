@@ -39,9 +39,6 @@ editor:
 :::
 :::
 
-Note that sub- and multi-panel figures are also natively supported by
-Quarto. See
-[here](https://quarto.org/docs/authoring/figures.html#subfigures).
 
 # Setting up your working environment {background-color="#B38CB4"}
 
@@ -68,8 +65,8 @@ to run programs, manage computer files and interact with the computer.
 3.  Organizing your project
 4.  Getting and Posting data
 
-Want to know more reasons to learn CLI, [Top ten reasons to learn to use
-the command line: Expanding your reproducibility
+Want to know more reasons to learn CLI, [Pat Schloss on Top ten reasons to learn to use
+the command line - Expanding your reproducibility
 tools](https://www.youtube.com/watch?v=BNG0kdK76WU)
 
 ## Terminal vs Shell
