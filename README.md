@@ -28,8 +28,9 @@ By the end of the workshop, attendees will be equipped to:
   - View directories and files
 6. Modifying File permissions
 7. What is a Bash script?
-8. Declare environment variables
-9. R Arguments in Bash Script
+8. Declare environment variables in Bash
+9. Run R Script at Command Line Interface
+10. R Arguments using `commandArgs()`
 
 
 
