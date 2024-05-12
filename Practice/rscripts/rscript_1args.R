@@ -45,7 +45,7 @@ create_plots_pdf <- function(output_filename){
 }
 
 x <- commandArgs(trailingOnly = TRUE)
-variable1 <- x[1]
+arg1 <- x[1]
 
 # create_plots_pdf(data_filename = "penguins.csv",group_name = species)
-create_plots_pdf(output_filename=variable1)
+create_plots_pdf(output_filename=arg1)

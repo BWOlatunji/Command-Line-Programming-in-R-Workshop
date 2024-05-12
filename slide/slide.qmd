@@ -9,7 +9,7 @@ author:
     orcid: 0009-0005-9144-6423
     email: bilqiiswunmi@gmail.com
     affiliations: Business-datalab.com
-date: last-modified
+date: 04-27-2024
 editor: 
   markdown: 
     wrap: 72
@@ -39,7 +39,6 @@ editor:
 :::
 :::
 
-
 # Setting up your working environment {background-color="#B38CB4"}
 
 ## Quick Checklist
@@ -65,17 +64,16 @@ to run programs, manage computer files and interact with the computer.
 3.  Organizing your project
 4.  Getting and Posting data
 
-Want to know more reasons to learn CLI, [Pat Schloss on Top ten reasons to learn to use
-the command line - Expanding your reproducibility
+Want to know more reasons to learn CLI, [Pat Schloss on Top ten reasons
+to learn to use the command line - Expanding your reproducibility
 tools](https://www.youtube.com/watch?v=BNG0kdK76WU)
 
 ## Terminal vs Shell
 
-The window shown in the two screenshots is called the terminal. This is
-the program that enables you to interact with the shell. It is the shell
-that executes the commands that is type at it's prompt.
+-   **a terminal** is a device or program that provides a user interface
+-   **a shell** is a command-line interpreter that processes commands
 
-Common shells include: - Bash (Bourne Again Shell, Linux), - Zsh
+**Common shells include**: - Bash (Bourne Again Shell, Linux), - Zsh
 (Linux/macOS), and - PowerShell (Windows).
 
 ## Command Line {#sec-crossref}
@@ -84,7 +82,7 @@ Common shells include: - Bash (Bourne Again Shell, Linux), - Zsh
 
 #### Windows Command Line interface
 
-![](images/launch cmd.png)
+![](images/launch%20cmd.png)
 
 ## Command Line
 
@@ -202,7 +200,6 @@ mkdir dir2 dir3
 mkdir dir2/dir2_1
 ```
 
-
 Adding new directory to a **non-existing** directory
 
 ``` bash
@@ -225,13 +222,11 @@ touch ex/newfile2.R
 
 ### Remove directory
 
-
 ``` bash
 
 rmdir dir1
 
 rmdir dir2/dir2_1
-
 ```
 
 **Remove Non-empty directory**
@@ -246,22 +241,23 @@ rm -RF ex
 
 **Remove Non-empty directory - Safer version**
 
-
 ``` bash
 rm -R -i ex
-
 ```
 
 ## Directories and Files
 
-### Remove file
+**Remove file**
 
 ``` bash
 rm old.txt
 
 rm *
+```
 
-# remove all files without restriction
+**Remove all files without restriction**
+
+``` bash
 rm -r dir1/
 ```
 
@@ -271,6 +267,11 @@ rm -r dir1/
 
 ``` bash
 open test.R
+```
+
+**Open in VSCode**
+
+``` bash
 code test.R
 ```
 
@@ -280,13 +281,23 @@ code test.R
 
 ``` bash
 find . -name "README.md"
+```
 
-# Ignore case-sensitivity
+**Ignore case-sensitivity**
+
+``` bash
 find . -iname "README.md"
+```
 
-# all files that ends with .md
+**All files that ends with .md**
+
+``` bash
 find . -name "*.md"
+```
 
+**Find files or directories by type**
+
+``` bash
 find -type d
 
 find -type f
@@ -336,25 +347,47 @@ mv script2.txt dir1/script3.R
 
 ### View directories and files
 
-::: columns
-::: {.column width="55%"}
-| **Command** | **Description**                                         |
-|:------------|:--------------------------------------------------------|
-| `mv`        | Move or rename files/directories                        |
-| `mv -f`     | Do not prompt for confirmation before overwriting files |
-| `mv -i`     | Prompt for confirmation before overwriting files        |
-| `mv -n`     | Do not overwrite existing files                         |
-| `mv -v`     | Move files in verbose mode                              |
-:::
+**cat Command** - allow users to view, concatenate, create, copy, merge,
+and manipulate file contents.View the Content of File.
 
-::: {.column width="45%"}
+**View content of a single file**
+
 ``` bash
 cat ./Practice/lorem_ipsum/sample1.txt 
+```
+
+**View content of more than one file**
+
+``` bash
 
 cat ./Practice/lorem_ipsum/sample1.txt ./Practice/lorem_ipsum/sample2.txt 
 ```
-:::
-:::
+
+**View contents of a file starting each line with line numbers**
+
+``` bash
+
+cat -n ./Practice/lorem_ipsum/sample1.txt
+```
+
+## Directories and Files
+
+### View directories and files
+
+**Create a file**
+
+``` bash
+
+cat > mycatyytext.txt
+1.Bash Skills Are Popular, and Pay Handsomely
+2.Command Line Skills Help With Building Repeatable Data Processes
+3.Learning Bash Makes You More Flexible
+4.Working With Text Files is Easier
+Learn more: https://www.dataquest.io/blog/why-learn-the-command-line/
+```
+
+Press Enter key to go to the next line. When you are done, press
+"CTRL+D" keys to save and exit
 
 # Modifying File permissions {background-color="#B38CB4"}
 
@@ -421,19 +454,85 @@ chmod go-w [file_name]
 #!/usr/bin/env bash
 ```
 
+\*\*Display a sentence at the prompt
+
+``` bash
+
+echo "Hello, World! This is Bilikisu from Nigeria."
+```
+
 ## Declare environment variables
+
+A simple variable
+
+``` bash
+$1
+```
+
+Give variable a name
 
 ``` bash
 myVar=$1
 var2=$2
 ```
 
-## R Arguments in Bash Script
+## Running R Script at the Command line
+
+Create a simple R script file, my_r_script.R. The run the following code
+at the command line prompt
+
+``` bash
+Rscript my_r_script.R
+```
+
+`Rscript` is a convenience command for running R scripts at the command
+line.
+
+The first argument in the vector is the path to the R executable file.
+The following are all command-line arguments that affect the behavior of
+R. From the R help file:
+
+```         
+/usr/lib/R/bin/exec/R
+```
+
+| Col1         | Col2                                                         |
+|--------------|--------------------------------------------------------------|
+| --no-echo    | Make R run as quietly as possible                            |
+| --no-restore | Don’t restore anything that was created during the R session |
+| --file       | Run this file                                                |
+| --args       | Pass these arguments to the file being run                   |
+|              |                                                              |
+
+## Command Arguments in R Script
+
+The `commandArgs` function extracts all the command line arguments
+within an r script and returns them as a vector. Write the following
+lines in a file named myscript-args.R:
+
+``` r
+args <- commandArgs()
+cat(args, sep = "\n")
+```
+
+Run at the command line using the code below:
+
+``` bash
+Rscript myscript_with_args.R
+```
+
+Removing
 
 ``` bash
 args <- commandArgs(trailingOnly = TRUE)
 ```
 
+Accessing more than more arguments
+
+``` bash
+
+x <- commandArgs(trailingOnly = TRUE)
+```
 
 # Reference {background-color="#B38CB4"}
 
@@ -456,3 +555,6 @@ taught by [Gwyneth Pena-Siguenza](https://twitter.com/madebygps) and
 
 [Appsilon, R Shiny Docker: How To Run Shiny Apps in a Docker
 Container](https://www.appsilon.com/post/r-shiny-docker-getting-started)
+
+[Sofware Carpentry's Programming with R: Command-Line
+Programs](https://swcarpentry.github.io/r-novice-inflammation/05-cmdline.html)

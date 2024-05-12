@@ -1,10 +1,10 @@
 # Base R Shiny image
-FROM ubuntu
+FROM rocker/rstudio
 
 # Make a directory in the container
-RUN mkdir /tmp/Practice
+RUN mkdir /home/Practice
 
-# Copy the Shiny app code
-COPY ./Practice ./tmp/Practice
 
+# # Copy the Shiny app code
+COPY ./Practice ./home/Practice
 
