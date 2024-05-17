@@ -43,4 +43,3 @@ final_plot <- ggarrange(
   labels = "A"       # Label of the line plot
 )
 ggsave(filename = "ggplot.png",plot = final_plot)
-#ggexport(final_plot, filename = "my_r_script_plots.pdf")

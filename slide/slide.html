@@ -1425,9 +1425,9 @@ Bilikisu Olatunji <a href="https://orcid.org/0009-0005-9144-6423" class="quarto-
 <span id="cb6-7"><a href></a></span>
 <span id="cb6-8"><a href></a><span class="fu">ls</span> <span class="pp">*</span>.<span class="pp">???</span></span>
 <span id="cb6-9"><a href></a></span>
-<span id="cb6-10"><a href></a><span class="fu">ls</span> <span class="pp">[[:</span><span class="ss">upper</span><span class="pp">:]]</span></span>
+<span id="cb6-10"><a href></a><span class="fu">ls</span> <span class="pp">[[:</span><span class="ss">upper</span><span class="pp">:]]*</span></span>
 <span id="cb6-11"><a href></a></span>
-<span id="cb6-12"><a href></a><span class="va">ls</span><span class="op">[</span>[:lower:<span class="op">]</span><span class="ex">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-12"><a href></a><span class="fu">ls</span> <span class="pp">[[:</span><span class="ss">lower</span><span class="pp">:]]*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="directories-and-files-2" class="slide level2">
 <h2>Directories and Files</h2>
@@ -1476,33 +1476,13 @@ Bilikisu Olatunji <a href="https://orcid.org/0009-0005-9144-6423" class="quarto-
 </section>
 <section id="directories-and-files-6" class="slide level2">
 <h2>Directories and Files</h2>
-<h3 id="view-file-in-iderstudio-vscode-cli">View file in IDE(RStudio, VSCode), CLI</h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href></a><span class="ex">open</span> test.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Open in VSCode</strong></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href></a><span class="ex">code</span> test.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 id="copy-directoryfiles">Copy Directory/files</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href></a></span>
+<span id="cb15-2"><a href></a><span class="fu">cp</span> <span class="at">-r</span> dir2 dir1</span>
+<span id="cb15-3"><a href></a></span>
+<span id="cb15-4"><a href></a><span class="fu">cp</span> oldtext.txt oldtext_2.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="directories-and-files-7" class="slide level2">
-<h2>Directories and Files</h2>
-<h3 id="find-directories-and-files">Find directories and files</h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href></a><span class="fu">find</span> . <span class="at">-name</span> <span class="st">&quot;README.md&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Ignore case-sensitivity</strong></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href></a><span class="fu">find</span> . <span class="at">-iname</span> <span class="st">&quot;README.md&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>All files that ends with .md</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href></a><span class="fu">find</span> . <span class="at">-name</span> <span class="st">&quot;*.md&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Find files or directories by type</strong></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href></a><span class="fu">find</span> <span class="at">-type</span> d</span>
-<span id="cb20-2"><a href></a></span>
-<span id="cb20-3"><a href></a><span class="fu">find</span> <span class="at">-type</span> f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="directories-and-files-8" class="slide level2">
-<h2>Directories and Files</h2>
-<h3 id="copy-directoryfiles">Copy Directory/files</h3>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href></a></span>
-<span id="cb21-2"><a href></a><span class="fu">cp</span> <span class="at">-r</span> dir2 dir1</span>
-<span id="cb21-3"><a href></a></span>
-<span id="cb21-4"><a href></a><span class="fu">cp</span> oldtext.txt oldtext_2.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="directories-and-files-9" class="slide level2">
 <h2>Directories and Files</h2>
 <h3 id="moverename-files">Move/Rename Files</h3>
 <div class="columns">
@@ -1542,139 +1522,40 @@ Bilikisu Olatunji <a href="https://orcid.org/0009-0005-9144-6423" class="quarto-
 </tbody>
 </table>
 </div><div class="column" style="width:45%;">
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href></a><span class="co"># no file extension</span></span>
-<span id="cb22-2"><a href></a><span class="fu">mv</span> script1.txt script2</span>
-<span id="cb22-3"><a href></a></span>
-<span id="cb22-4"><a href></a><span class="co"># file extension</span></span>
-<span id="cb22-5"><a href></a><span class="fu">mv</span> script2 script2.txt</span>
-<span id="cb22-6"><a href></a></span>
-<span id="cb22-7"><a href></a><span class="co"># file extension</span></span>
-<span id="cb22-8"><a href></a><span class="fu">mv</span> script2.txt dir1/script3.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href></a><span class="co"># no file extension</span></span>
+<span id="cb16-2"><a href></a><span class="fu">mv</span> script1.txt script2</span>
+<span id="cb16-3"><a href></a></span>
+<span id="cb16-4"><a href></a><span class="co"># file extension</span></span>
+<span id="cb16-5"><a href></a><span class="fu">mv</span> script2 script2.txt</span>
+<span id="cb16-6"><a href></a></span>
+<span id="cb16-7"><a href></a><span class="co"># file extension</span></span>
+<span id="cb16-8"><a href></a><span class="fu">mv</span> script2.txt dir1/script3.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="directories-and-files-10" class="slide level2">
+<section id="directories-and-files-8" class="slide level2">
 <h2>Directories and Files</h2>
 <h3 id="view-directories-and-files">View directories and files</h3>
 <p><strong>cat Command</strong> - allow users to view, concatenate, create, copy, merge, and manipulate file contents.View the Content of File.</p>
 <p><strong>View content of a single file</strong></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href></a><span class="fu">cat</span> ./Practice/lorem_ipsum/sample1.txt </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href></a><span class="fu">cat</span> ./Practice/lorem_ipsum/sample1.txt </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>View content of more than one file</strong></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href></a></span>
-<span id="cb24-2"><a href></a><span class="fu">cat</span> ./Practice/lorem_ipsum/sample1.txt ./Practice/lorem_ipsum/sample2.txt </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href></a></span>
+<span id="cb18-2"><a href></a><span class="fu">cat</span> ./Practice/lorem_ipsum/sample1.txt ./Practice/lorem_ipsum/sample2.txt </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>View contents of a file starting each line with line numbers</strong></p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href></a></span>
-<span id="cb25-2"><a href></a><span class="fu">cat</span> <span class="at">-n</span> ./Practice/lorem_ipsum/sample1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href></a></span>
+<span id="cb19-2"><a href></a><span class="fu">cat</span> <span class="at">-n</span> ./Practice/lorem_ipsum/sample1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="directories-and-files-11" class="slide level2">
+<section id="directories-and-files-9" class="slide level2">
 <h2>Directories and Files</h2>
 <h3 id="view-directories-and-files-1">View directories and files</h3>
 <p><strong>Create a file</strong></p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href></a></span>
-<span id="cb26-2"><a href></a><span class="fu">cat</span> <span class="op">&gt;</span> mycatyytext.txt</span>
-<span id="cb26-3"><a href></a><span class="ex">1.Bash</span> Skills Are Popular, and Pay Handsomely</span>
-<span id="cb26-4"><a href></a><span class="ex">2.Command</span> Line Skills Help With Building Repeatable Data Processes</span>
-<span id="cb26-5"><a href></a><span class="ex">3.Learning</span> Bash Makes You More Flexible</span>
-<span id="cb26-6"><a href></a><span class="ex">4.Working</span> With Text Files is Easier</span>
-<span id="cb26-7"><a href></a><span class="ex">Learn</span> more: https://www.dataquest.io/blog/why-learn-the-command-line/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href></a></span>
+<span id="cb20-2"><a href></a><span class="fu">cat</span> <span class="op">&gt;</span> mycatyytext.txt</span>
+<span id="cb20-3"><a href></a><span class="ex">1.</span> bash is simple</span>
+<span id="cb20-4"><a href></a><span class="ex">2.</span> bash is fun</span>
+<span id="cb20-5"><a href></a><span class="ex">3.</span> bash is awesome</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Press Enter key to go to the next line. When you are done, press “CTRL+D” keys to save and exit</p>
-</section></section>
-<section>
-<section id="modifying-file-permissions" class="title-slide slide level1 center" data-background-color="#B38CB4">
-<h1>Modifying File permissions</h1>
-
-</section>
-<section id="change-files-permission" class="slide level2">
-<h2>Change Files Permission</h2>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>Operators</strong></th>
-<th style="text-align: center;"><strong>Definition</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>`+`</strong></td>
-<td style="text-align: center;">Add permissions</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>`-`</strong></td>
-<td style="text-align: center;">Remove permissions</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>`=`</strong></td>
-<td style="text-align: center;">Set the permissions to the specified values</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="change-files-permission-1" class="slide level2">
-<h2>Change Files Permission</h2>
-<h3 id="file-permissions">File Permissions</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>Letters</strong></th>
-<th style="text-align: center;"><strong>Definition</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>`r`</strong></td>
-<td style="text-align: center;">Read permission</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>`w`</strong></td>
-<td style="text-align: center;">Write permission</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>`x`</strong></td>
-<td style="text-align: center;">Execute permission</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="change-files-permission-2" class="slide level2">
-<h2>Change Files Permission</h2>
-<h3 id="file-ownership">File Ownership</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>Reference</strong></th>
-<th style="text-align: center;"><strong>Class</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>u</strong></td>
-<td style="text-align: center;">Owner</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>g</strong></td>
-<td style="text-align: center;">Group</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>o</strong></td>
-<td style="text-align: center;">Others</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>a</strong></td>
-<td style="text-align: center;">All (owner,groups,others)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="change-files-permission-3" class="slide level2">
-<h2>Change Files Permission</h2>
-<p>Assign Read, write and execute permissions to the file owner:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href></a><span class="fu">chmod</span> u+rwx <span class="pp">[</span><span class="ss">file_name</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Remove write permission from user:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href></a><span class="fu">chmod</span> <span class="at">-w</span> <span class="pp">[</span><span class="ss">file_name</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Read and write for Owner, and Read-only for the group and other:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href></a><span class="fu">chmod</span> u+rw,go+r <span class="pp">[</span><span class="ss">file_name</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Remove write permission for the group and others:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href></a><span class="fu">chmod</span> go-w <span class="pp">[</span><span class="ss">file_name</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
 <section id="bash-scripting" class="title-slide slide level1 center" data-background-color="#B38CB4">
@@ -1683,30 +1564,33 @@ Bilikisu Olatunji <a href="https://orcid.org/0009-0005-9144-6423" class="quarto-
 </section>
 <section id="start-with-the-shebang" class="slide level2">
 <h2>Start with the Shebang!</h2>
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href></a><span class="co">#!/usr/bin/env bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href></a><span class="co">#!/usr/bin/env bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>**Display a sentence at the prompt</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href></a></span>
-<span id="cb32-2"><a href></a><span class="bu">echo</span> <span class="st">&quot;Hello, World! This is Bilikisu from Nigeria.&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href></a></span>
+<span id="cb22-2"><a href></a><span class="bu">echo</span> <span class="st">&quot;Hello, World! This is Bilikisu from Nigeria.&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="declare-environment-variables" class="slide level2">
 <h2>Declare environment variables</h2>
 <p>A simple variable</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href></a><span class="va">$1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href></a><span class="va">$1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Give variable a name</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href></a><span class="va">myVar</span><span class="op">=</span><span class="va">$1</span></span>
-<span id="cb34-2"><a href></a><span class="va">var2</span><span class="op">=</span><span class="va">$2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href></a><span class="va">myVar</span><span class="op">=</span><span class="va">$1</span></span>
+<span id="cb24-2"><a href></a><span class="va">var2</span><span class="op">=</span><span class="va">$2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="running-r-script-at-the-command-line" class="slide level2">
 <h2>Running R Script at the Command line</h2>
 <p>Create a simple R script file, my_r_script.R. The run the following code at the command line prompt</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href></a><span class="ex">Rscript</span> my_r_script.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href></a><span class="ex">Rscript</span> my_r_script.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>Rscript</code> is a convenience command for running R scripts at the command line.</p>
 <p>The first argument in the vector is the path to the R executable file. The following are all command-line arguments that affect the behavior of R. From the R help file:</p>
 <pre><code>/usr/lib/R/bin/exec/R</code></pre>
+</section>
+<section id="running-r-script-at-the-command-line-1" class="slide level2">
+<h2>Running R Script at the Command line</h2>
 <table>
 <colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
+<col style="width: 22%">
+<col style="width: 77%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1741,15 +1625,15 @@ Bilikisu Olatunji <a href="https://orcid.org/0009-0005-9144-6423" class="quarto-
 <section id="command-arguments-in-r-script" class="slide level2">
 <h2>Command Arguments in R Script</h2>
 <p>The <code>commandArgs</code> function extracts all the command line arguments within an r script and returns them as a vector. Write the following lines in a file named myscript-args.R:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href></a>args <span class="ot">&lt;-</span> <span class="fu">commandArgs</span>()</span>
-<span id="cb37-2"><a href></a><span class="fu">cat</span>(args, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href></a>args <span class="ot">&lt;-</span> <span class="fu">commandArgs</span>()</span>
+<span id="cb27-2"><a href></a><span class="fu">cat</span>(args, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Run at the command line using the code below:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href></a><span class="ex">Rscript</span> myscript_with_args.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href></a><span class="ex">Rscript</span> myscript_with_args.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Removing</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href></a><span class="ex">args</span> <span class="op">&lt;</span>- commandArgs<span class="er">(</span><span class="ex">trailingOnly</span> = TRUE<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href></a><span class="ex">args</span> <span class="op">&lt;</span>- commandArgs<span class="er">(</span><span class="ex">trailingOnly</span> = TRUE<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Accessing more than more arguments</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href></a></span>
-<span id="cb40-2"><a href></a><span class="ex">x</span> <span class="op">&lt;</span>- commandArgs<span class="er">(</span><span class="ex">trailingOnly</span> = TRUE<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href></a></span>
+<span id="cb30-2"><a href></a><span class="ex">x</span> <span class="op">&lt;</span>- commandArgs<span class="er">(</span><span class="ex">trailingOnly</span> = TRUE<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
 <section id="reference" class="title-slide slide level1 center" data-background-color="#B38CB4">
@@ -1760,6 +1644,7 @@ Bilikisu Olatunji <a href="https://orcid.org/0009-0005-9144-6423" class="quarto-
 <h2>References</h2>
 <p><a href="https://jeroenjanssens.com/dsatcl/">Data Science at the Command Line</a> written by <a href="https://jeroenjanssens.com/">Jeroen Janssens</a></p>
 <p><a href="https://bash-intro.rsquaredacademy.com/">Command Line Basics for R Users</a></p>
+<p><a href="https://www.dataquest.io/blog/why-learn-the-command-line/">Bruno Cunha, 11 Reasons To Learn Bash (A.K.A. Command Line)</a></p>
 <p><a href="https://www.youtube.com/watch?v=NSy-WByR8Qo&amp;list=PLmNrK_nkqBpKhP0Jb2XGPoRRfToHF1w-y">Working at the Command Line</a> taught by <a href="https://riffomonas.org/about/">Pat Schloss</a></p>
 <p><a href="https://www.youtube.com/playlist?list=PLlrxD0HtieHh9ZhrnEbZKhzk0cetzuX7l">Bash for Beginners</a> taught by <a href="https://twitter.com/madebygps">Gwyneth Pena-Siguenza</a> and <a href="https://twitter.com/joshduffney">Josh Duffney</a></p>
 <p><a href="https://www.appsilon.com/post/r-shiny-docker-getting-started">Appsilon, R Shiny Docker: How To Run Shiny Apps in a Docker Container</a></p>

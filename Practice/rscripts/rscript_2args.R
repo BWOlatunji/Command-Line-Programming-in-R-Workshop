@@ -49,3 +49,4 @@ variable2 <- x[2]
 
 # create_plots_pdf(data_filename = "penguins.csv",group_name = species)
 create_plots_pdf(output_filename=variable1,group_name=variable2)
+

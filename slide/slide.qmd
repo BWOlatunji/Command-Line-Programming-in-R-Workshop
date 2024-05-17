@@ -183,9 +183,9 @@ ls *.??
 
 ls *.???
 
-ls [[:upper:]]
+ls [[:upper:]]*
 
-ls[[:lower:]]
+ls [[:lower:]]*
 ```
 
 ## Directories and Files
@@ -261,47 +261,6 @@ rm *
 rm -r dir1/
 ```
 
-## Directories and Files
-
-### View file in IDE(RStudio, VSCode), CLI
-
-``` bash
-open test.R
-```
-
-**Open in VSCode**
-
-``` bash
-code test.R
-```
-
-## Directories and Files
-
-### Find directories and files
-
-``` bash
-find . -name "README.md"
-```
-
-**Ignore case-sensitivity**
-
-``` bash
-find . -iname "README.md"
-```
-
-**All files that ends with .md**
-
-``` bash
-find . -name "*.md"
-```
-
-**Find files or directories by type**
-
-``` bash
-find -type d
-
-find -type f
-```
 
 ## Directories and Files
 
@@ -379,72 +338,15 @@ cat -n ./Practice/lorem_ipsum/sample1.txt
 ``` bash
 
 cat > mycatyytext.txt
-1.Bash Skills Are Popular, and Pay Handsomely
-2.Command Line Skills Help With Building Repeatable Data Processes
-3.Learning Bash Makes You More Flexible
-4.Working With Text Files is Easier
-Learn more: https://www.dataquest.io/blog/why-learn-the-command-line/
+1. bash is simple
+2. bash is fun
+3. bash is awesome
 ```
 
 Press Enter key to go to the next line. When you are done, press
 "CTRL+D" keys to save and exit
 
-# Modifying File permissions {background-color="#B38CB4"}
 
-## Change Files Permission
-
-| **Operators** |               **Definition**                |
-|:-------------:|:-------------------------------------------:|
-|   **\`+\`**   |               Add permissions               |
-|   **\`-\`**   |             Remove permissions              |
-|   **\`=\`**   | Set the permissions to the specified values |
-
-## Change Files Permission
-
-### File Permissions
-
-| **Letters** |   **Definition**   |
-|:-----------:|:------------------:|
-|  **\`r\`**  |  Read permission   |
-|  **\`w\`**  |  Write permission  |
-|  **\`x\`**  | Execute permission |
-
-## Change Files Permission
-
-### File Ownership
-
-| **Reference** |         **Class**         |
-|:-------------:|:-------------------------:|
-|     **u**     |           Owner           |
-|     **g**     |           Group           |
-|     **o**     |          Others           |
-|     **a**     | All (owner,groups,others) |
-
-## Change Files Permission
-
-Assign Read, write and execute permissions to the file owner:
-
-``` bash
-chmod u+rwx [file_name]
-```
-
-Remove write permission from user:
-
-``` bash
-chmod -w [file_name]
-```
-
-Read and write for Owner, and Read-only for the group and other:
-
-``` bash
-chmod u+rw,go+r [file_name]
-```
-
-Remove write permission for the group and others:
-
-``` bash
-chmod go-w [file_name]
-```
 
 # Bash Scripting {background-color="#B38CB4"}
 
@@ -496,8 +398,10 @@ R. From the R help file:
 /usr/lib/R/bin/exec/R
 ```
 
+## Running R Script at the Command line
+
 | Col1         | Col2                                                         |
-|--------------|--------------------------------------------------------------|
+|----------------|-------------------------------------------------------|
 | --no-echo    | Make R run as quietly as possible                            |
 | --no-restore | Don’t restore anything that was created during the R session |
 | --file       | Run this file                                                |
@@ -543,6 +447,8 @@ written by [Jeroen Janssens](https://jeroenjanssens.com/)
 
 [Command Line Basics for R
 Users](https://bash-intro.rsquaredacademy.com/)
+
+[Bruno Cunha, 11 Reasons To Learn Bash (A.K.A. Command Line)](https://www.dataquest.io/blog/why-learn-the-command-line/)
 
 [Working at the Command
 Line](https://www.youtube.com/watch?v=NSy-WByR8Qo&list=PLmNrK_nkqBpKhP0Jb2XGPoRRfToHF1w-y)

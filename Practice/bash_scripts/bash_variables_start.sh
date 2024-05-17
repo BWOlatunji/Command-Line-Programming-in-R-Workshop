@@ -9,7 +9,7 @@ url=$1
 
 
 # Always use double quote to get the value instead of the variable name
-echo "$url"
+echo '$url'
 
 
 
